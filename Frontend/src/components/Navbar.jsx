@@ -1,86 +1,150 @@
-import "./styles.css";
-import logo from "../assets/logo.webp";
+import React, { useState } from "react";
+import "../styles/components/navbar.css";
+import logo from "../assets/logo.png";
 
-export default function navbar() {
+const ProductsIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="me-2"
+  >
+    <rect x="2" y="2" width="6" height="6" rx="2" fill="#333" />
+    <rect x="12" y="2" width="6" height="6" rx="2" fill="#333" />
+    <rect x="2" y="12" width="6" height="6" rx="2" fill="#333" />
+    <rect x="12" y="12" width="6" height="6" rx="2" fill="#333" />
+  </svg>
+);
+
+const Navbar = () => {
+  const [activeNav, setActiveNav] = useState("home");
+
   return (
-<>
-      <nav className="navbar navbar-expand-lg nav-primary ">
-        <div className="container brand-details">
-          <span>
-            <img
-              className="icons-nav"
-              src="https://img.icons8.com/?size=100&id=22790&format=png&color=FFFFFF"
-            />
-            sales@vavensoft.com
-          </span>
-          <ul className="navbar-nav me-auto mb-lg-0">
-            <li className="nav-item">
-              <span>
-                <img
-                  className="icons-nav"
-                  src="https://img.icons8.com/?size=100&id=9730&format=png&color=FFFFFF"
-                />{" "}
-                +91 9090979706 , +91 9090949405
-              </span>
+    <nav className="navbar navbar-expand-md  bg-white  custom-navbar">
+      <div className="container-fluid px-3 px-md-5">
+        {/* Logo and Brand */}
+        <a className="navbar-brand d-flex align-items-center" href="#">
+          <img
+            className="dyno-logo me-2"
+            src={logo}
+            alt="Dynotech Innovations Logo"
+            style={{ height: "24px" }}
+          />
+        </a>
+        {/* Toggler for mobile */}
+        <button
+          className="navbar-toggler d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <ProductsIcon /> Products
+        </button>
+
+        <div
+          className="collapse collapsed-content navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <li className="nav-item mx-4 d-none d-md-block">
+            <a
+              className={`nav-link fw-semibold${
+                activeNav === "home" ? " active" : ""
+              }`}
+              aria-current="page"
+              href="#home"
+              onClick={() => setActiveNav("home")}
+            >
+              Home
+            </a>
+          </li>
+          <ul className="navbar-nav mb-2 mb-lg-0 align-items-end bg-light rounded  px-3 py-2 custom-nav">
+            <li className="nav-item mx-2 d-none d-md-flex">
+              <a
+                className={`nav-link fw-semibold d-flex align-items-center products-pill${
+                  activeNav === "products" ? " active" : ""
+                }`}
+                href="#products"
+                onClick={() => setActiveNav("products")}
+              >
+                Products
+              </a>
+            </li>
+            <li className="nav-item mx-2">
+              <a
+                className={`nav-link fw-semibold${
+                  activeNav === "dynocash" ? " active" : ""
+                }`}
+                href="#products"
+                onClick={() => setActiveNav("dynocash")}
+              >
+                DynoCash
+              </a>
+            </li>
+            <li className="nav-item mx-2">
+              <a
+                className={`nav-link fw-semibold${
+                  activeNav === "speechcue" ? " active" : ""
+                }`}
+                href="#"
+                onClick={() => setActiveNav("speechcue")}
+              >
+                SpeechCue
+              </a>
+            </li>
+            <li className="nav-item mx-2">
+              <a
+                className={`nav-link fw-semibold${
+                  activeNav === "nameword" ? " active" : ""
+                }`}
+                href="#"
+                onClick={() => setActiveNav("nameword")}
+              >
+                NameWord
+              </a>
+            </li>
+            <li className="nav-item mx-2">
+              <a
+                className={`nav-link fw-semibold${
+                  activeNav === "bozzmail" ? " active" : ""
+                }`}
+                href="#"
+                onClick={() => setActiveNav("bozzmail")}
+              >
+                BozzMail
+              </a>
+            </li>
+            <li className="nav-item mx-2 d-md-none">
+              <a
+                className={`nav-link fw-semibold${
+                  activeNav === "waitlist" ? " active" : ""
+                }`}
+                href="#"
+                onClick={() => setActiveNav("waitlist")}
+              >
+                Waitlist
+              </a>
             </li>
           </ul>
-          <span className="social-links">
-            Follow Us:
-            
+          <li className="nav-item mx-4 d-none d-md-block">
             <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginRight: "20px",marginLeft: "20px"  }}
+              className={`nav-link fw-semibold${
+                activeNav === "watchlist" ? " active" : ""
+              }`}
+              href="#"
+              onClick={() => setActiveNav("watchlist")}
             >
-              <img
-                src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF"
-                alt="LinkedIn"
-                style={{ height: "24px", verticalAlign: "middle" }}
-              />
+              Watchlist
             </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginRight: "20px"}}
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=118467&format=png&color=FFFFFF"
-                alt="Facebook"
-                style={{ height: "20px", verticalAlign: "middle" }}
-              />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginRight: "20px" }}
-            >
-              <img
-                src="https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF"
-                alt="Instagram"
-                style={{ height: "24px", verticalAlign: "middle" }}
-              />
-            </a>
-           
-          </span>
+          </li>
         </div>
-      </nav>
+        {/* Centered Nav Links */}
+      </div>
+    </nav>
+  );
+};
 
-      <nav className="navbar nav-secondary ">
-        <div className="container">
-          <img className="navbar-brand" src={logo} alt="Navbar" />
-          <button className="btn btn-logo" type="submit">
-            <img
-              className="login-logo"
-              src="https://img.icons8.com/?size=100&id=85094&format=png&color=FFFFFF"
-              alt="Navbar"
-            />{" "}
-            Login
-          </button>
-        </div>
-      </nav>
-    </>
-  )
-}
+export default Navbar;

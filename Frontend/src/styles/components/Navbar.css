@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+.custom-nav{
+  right: 20px;
+  top: 50px;
+  width: 100%;
+  width: 150px;
+  position: fixed;
+}
+}
+a.nav-link.fw-semibold.d-flex.align-items-center.products-pill{
+  color:949494 ;
+}
+a.nav-link.fw-semibold.d-flex.align-items-center.products-pill {
+    color: #949494;
+}
+.navbar-nav .nav-link {
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  border-radius: 8px;
+  color: #2d3748;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #ffffff;
+  color: #1a202c;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.navbar-nav .nav-link:active {
+  background: #ffffff;
+  color: #1a202c;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transform: scale(0.97);
+}
+
+.navbar-nav .nav-link.home-link:hover,
+.navbar-nav .nav-link.watchlist-link:hover {
+  background: #f3f4f6 !important;
+  color: #1a202c !important;
+}
