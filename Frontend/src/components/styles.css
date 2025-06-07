@@ -1,0 +1,215 @@
+.nav-primary {
+    background-color: #012f70;
+    color: #fff;
+}
+
+
+.nav-primary,
+.nav-primary * {
+    color: #fff !important;
+}
+
+.brand-details {
+    color: #fff;
+}
+
+.icons-nav {
+    height: 24px;
+    margin-right: 3px;
+    margin-left: 10px;
+}
+
+.navbar-brand {
+    height: 10vh;
+}
+
+.login-logo {
+    height: 30px;
+}
+
+.btn-logo {
+    background-color: #012f70;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.btn-logo:hover {
+    background-color: #012f70;
+    color: #fff;
+}
+
+/* Navbar Ends Here */
+
+
+/* Her-sections Starts Here */
+.hero-section-bg {
+
+    background-image: url(../assets/Hero_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.launch-box {
+    border-radius: 12px;
+
+}
+
+.vaven-image {
+    background-image: inherit !important;
+}
+
+/* Hero-sections Ends */
+
+
+/* Cards Starts From Here */
+h2.text {
+    color: #012f70;
+}
+
+.card.feature-hover {
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border-radius: 0 24px 24px 0 ;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 20px;
+    
+}
+
+.card.feature-hover:hover,
+.card.feature-hover:focus,
+.card.feature-hover:active {
+    background-image: url('../assets/Card_bg.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff !important;
+    box-shadow: 0 0 24px 0 rgba(0, 122, 255, 0.15);
+}
+
+.card.feature-hover img {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+}
+
+.card.feature-hover:not(:hover) img {
+    filter: none;
+}
+
+.card.feature-hover.active {
+    background-image: url('../assets/Card_bg.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff !important;
+}
+
+.card.feature-hover.active img {
+    filter: brightness(0) invert(1);
+}
+
+.about-bg {
+    background-image: url(../assets/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Pricing Plan Card Hover & Active Effect with Background Image */
+.card.border-secondary {
+  border-radius: 48px ;
+  max-width: 320px;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  transition: background 0.5s cubic-bezier(0.4,0,0.2,1), color 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s cubic-bezier(0.4,0,0.2,1), transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.card.border-secondary:hover,
+.card.border-secondary.active {
+  background-image: url('../assets/Card_bg.jpg') !important;
+  background-repeat: no-repeat;
+background-size: cover;
+animation: bg-fade-in 5s cubic-bezier(0.4,0,0.2,1);
+  color: #fff !important;
+  box-shadow: 0 8px 32px rgba(59,91,219,0.15), 0 1.5px 8px rgba(0,0,0,0.08);
+  transform: translateY(-30px) scale(1.1);
+}
+.card.border-secondary:hover .text-primary,
+.card.border-secondary.active .text-primary,
+.card.border-secondary:hover .text-secondary,
+.card.border-secondary.active .text-secondary,
+.card.border-secondary:hover .text-danger,
+.card.border-secondary.active .text-danger {
+  color: #fff !important;
+}
+.card.border-secondary:hover .btn-primary {
+    transition: background 0.3s, color 0.3s, border 5s;
+}
+.card.border-secondary.active .btn-primary {
+  background: #fff;
+  color: #3b5bdb;
+  border-color: #fff;
+  transition: background 1s, color 0.5s, border 0.5s;
+}
+
+.card.border-secondary.selected {
+  position: relative;
+}
+.card.border-secondary.selected::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  bottom: 100px;
+  width: 8px;
+  border-radius: 8px;
+  background: #fff;
+  z-index: 2;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  opacity: 1;
+  box-shadow: 1px 0 8px 0 rgba(0,0,0,0.07);
+}
+
+/*  */
+.get-in{
+        background-color: #012f70;
+
+}
+/*  */
+
+/*  */
+
+section.table-info{
+    padding: 20px;
+    margin: 50px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    border-radius: 24px;
+}
+
+
+.bg-color{
+    background-color: #ecf0fa;
+}
+.fire-img{
+    height: 20px;
+}
+/*  */
+
+
+
+
+/* For Small Screens */
+@media (max-width: 600px) {
+    .nav-primary {
+        display: none;
+    }
+
+    .btn-logo,
+    .navbar-brand {
+        display: block;
+        margin: 0 auto;
+
+    }
+}
+
